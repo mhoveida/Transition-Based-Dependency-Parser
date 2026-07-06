@@ -77,8 +77,6 @@ def conll_reader(input_file):
                 break
         current_deps.add_deprel(parse_conll_relation(line))
 
-
-
 if __name__ == "__main__":
     with open(sys.argv[1],'r') as in_file:
         relations = set()

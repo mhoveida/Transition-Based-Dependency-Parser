@@ -114,7 +114,6 @@ class FeatureExtractor(object):
         return vocab     
 
     def get_input_representation(self, words, pos, state):
-        # TODO: Write this method for Part 2
         input_vector = np.zeros(6)
         #mapping special symbols to their indices
         special_symbols = {
@@ -152,7 +151,6 @@ class FeatureExtractor(object):
         return np.array(input_vector)
 
     def get_output_representation(self, output_pair):  
-        # TODO: Write this method for Part 2
         output_vector= np.zeros(91)
         index = self.output_labels.get(output_pair)  # getting index from output_labels
         if index is not None:  # If there is transition-lable pair in the dictionary
@@ -183,8 +181,6 @@ if __name__ == "__main__":
 
     WORD_VOCAB_FILE = 'data/words.vocab'
     POS_VOCAB_FILE = 'data/pos.vocab'
-    #WORD_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/words.vocab'
-    #POS_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/pos.vocab'
 
     try:
         word_vocab_f = open(WORD_VOCAB_FILE,'r')

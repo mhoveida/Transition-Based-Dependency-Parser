@@ -25,8 +25,6 @@ class DependencyModel(Module):
 
   def __init__(self, word_types, outputs):
     super(DependencyModel, self).__init__()
-    # TODO: complete for part 3
-
     #defining embedding layer
     self.embedding = Embedding(num_embeddings=word_types, embedding_dim=128) 
 
@@ -37,8 +35,6 @@ class DependencyModel(Module):
     self.output_layer = Linear(in_features=128, out_features=outputs)
 
   def forward(self, inputs):
-
-    # TODO: complete for part 3
     embedded = self.embedding(inputs)  
     
     embedded_flattened = embedded.view(-1, 768) 
@@ -105,8 +101,6 @@ if __name__ == "__main__":
 
     WORD_VOCAB_FILE = 'data/words.vocab'
     POS_VOCAB_FILE = 'data/pos.vocab'
-    #WORD_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/words.vocab'
-    #POS_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/pos.vocab'
 
     try:
         word_vocab_f = open(WORD_VOCAB_FILE,'r')

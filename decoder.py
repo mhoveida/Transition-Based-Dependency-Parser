@@ -26,7 +26,6 @@ class Parser(object):
         state = State(range(1,len(words)))
         state.stack.append(0)
 
-        # TODO: Write the body of this loop for part 5
         while state.buffer:
           feature = self.extractor.get_input_representation(words, pos, state)
           feature_tensor=torch.tensor(feature, dtype=torch.long).unsqueeze(0)
@@ -61,8 +60,6 @@ if __name__ == "__main__":
 
     WORD_VOCAB_FILE = 'data/words.vocab'
     POS_VOCAB_FILE = 'data/pos.vocab'
-    #WORD_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/words.vocab'
-    #POS_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/pos.vocab'
 
     try:
         word_vocab_f = open(WORD_VOCAB_FILE,'r')

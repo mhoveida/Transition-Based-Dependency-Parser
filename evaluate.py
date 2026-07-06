@@ -20,10 +20,7 @@ if __name__ == "__main__":
 
     WORD_VOCAB_FILE = 'data/words.vocab'
     POS_VOCAB_FILE = 'data/pos.vocab'
-    #WORD_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/words.vocab'
-    #POS_VOCAB_FILE = 'Downloads/NLP/HW2/hw2_torch/data/pos.vocab'
-
-
+    
     try:
         word_vocab_f = open(WORD_VOCAB_FILE,'r')
         pos_vocab_f = open(POS_VOCAB_FILE,'r') 
